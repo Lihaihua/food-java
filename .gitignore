@@ -19,4 +19,4 @@ bin-release/
 /jjj_food_chain_app/unpackage
 
 .idea
-null
+**/target
