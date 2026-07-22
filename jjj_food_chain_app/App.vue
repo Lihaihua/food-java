@@ -159,28 +159,39 @@
 							"#B99970",
 							"#A4A4D6",
 						];
-						uni.setTabBarStyle({
-							color: '#333333',
-							selectedColor: color[theme],
-						})
-						uni.setTabBarItem({
-							index: 0,
-							text: '首页',
-							iconPath: '/static/tab/home.png',
-							selectedIconPath: '/static/tab/home_' + theme + '.png'
-						})
-						uni.setTabBarItem({
-							index: 1,
-							text: '订单',
-							iconPath: '/static/tab/order.png',
-							selectedIconPath: '/static/tab/order_' + theme + '.png'
-						})
-						uni.setTabBarItem({
-							index: 2,
-							text: '我的',
-							iconPath: '/static/tab/user.png',
-							selectedIconPath: '/static/tab/user_' + theme + '.png'
-						})
+						const pages = getCurrentPages();
+						if(pages.length > 0) {
+							const currentRoute = pages[pages.length - 1].route
+							const tabPages = [
+								"pages/index/index",
+								"pages/order/myorder",
+								"pages/user/index/index"
+							];
+							if(tabPages.includes(currentRoute)) {
+								uni.setTabBarStyle({
+									color: '#333333',
+									selectedColor: color[theme],
+								})
+								uni.setTabBarItem({
+									index: 0,
+									text: '首页',
+									iconPath: '/static/tab/home.png',
+									selectedIconPath: '/static/tab/home_' + theme + '.png'
+								})
+								uni.setTabBarItem({
+									index: 1,
+									text: '订单',
+									iconPath: '/static/tab/order.png',
+									selectedIconPath: '/static/tab/order_' + theme + '.png'
+								})
+								uni.setTabBarItem({
+									index: 2,
+									text: '我的',
+									iconPath: '/static/tab/user.png',
+									selectedIconPath: '/static/tab/user_' + theme + '.png'
+								})
+							}
+						}
 						uni.setStorageSync('theme', theme);
 					}
 				});

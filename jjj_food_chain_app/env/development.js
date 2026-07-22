@@ -1,4 +1,4 @@
-let url = 'http://127.0.0.1:8891';
+let url = 'http://7o9519x655.zicp.fun:8891';
 if (process.env.NODE_ENV != 'development') {
 	url = '/api';
 }

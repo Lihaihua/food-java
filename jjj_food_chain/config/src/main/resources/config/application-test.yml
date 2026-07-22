@@ -25,15 +25,15 @@ logging:
 
 spring:
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/jjj_food_chain?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://120.79.45.77:3306/test?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
     username: root
-    password: root
+    password: 4c4c4c4C.
 
   # Redis配置
   redis:
     database: 0
     host: localhost
-    password: 123456
+    #password: 123456
     port: 6379
 
 # 打印SQL语句和结果集，本地开发环境可开启，线上注释掉

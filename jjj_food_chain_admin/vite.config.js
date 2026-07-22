@@ -12,7 +12,7 @@ export default defineConfig(({ mode }) => {
   // 获取当前环境的配置
   const config = loadEnv(mode, './')
   return {
-	base: process.env.NODE_ENV === 'production' ? './' : '/',
+	base: process.env.NODE_ENV === 'production' ? '/jjjfood/' : '/',
     server: {
       proxy: {
         '/api': {
